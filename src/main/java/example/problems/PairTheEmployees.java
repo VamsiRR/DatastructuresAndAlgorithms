@@ -8,11 +8,16 @@ public class PairTheEmployees {
     public static void main(String[] args) {
         String[] employees = new String[]{"vamsi", "prasanna", "vagmi", "Hymi", "jhon", "amaya", "Nani"};
 
+        createPair(employees);
+
+    }
+
+    private static void createPair(String[] employees) {
         List<List<String>> pairs = new ArrayList<>();
 
         List<String> pair = null;
 
-        int len = employees.length - 1; //If even that means we have odd elements in the list. We need to prevent that being added to the pair.
+        //If even that means we have odd elements in the list. We need to prevent that being added to the pair.
 
         for (int i = 0; i < employees.length; i++) {
             if (i % 2 == 0)
@@ -32,7 +37,6 @@ public class PairTheEmployees {
         }
 
         pairs.forEach(System.out::println);
-
     }
 
     private static boolean pairExist(String[] arr, int id)
